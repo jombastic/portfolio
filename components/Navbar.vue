@@ -9,18 +9,16 @@
         ><span class="font-extrabold">Slavcho</span>Mitrov</NuxtLink
       >
     </div>
-    <div class="flex items-center text-[#000000]">
-      <NuxtLink
-        class="relative mx-5 flex justify-center before:invisible before:absolute before:-top-10 before:inline-block before:h-0 before:w-0 before:border-l-[.625rem] before:border-r-[.625rem] before:border-t-[.875rem] before:border-solid before:border-[#232323] before:border-l-transparent before:border-r-transparent before:align-middle hover:before:visible"
-        to="/"
-        >About</NuxtLink
-      >
-      <NuxtLink
-        class="relative mx-5 flex justify-center before:invisible before:absolute before:-top-10 before:inline-block before:h-0 before:w-0 before:border-l-[.625rem] before:border-r-[.625rem] before:border-t-[.875rem] before:border-solid before:border-[#232323] before:border-l-transparent before:border-r-transparent before:align-middle hover:before:visible"
-        to="/"
-        >Work</NuxtLink
-      >
-
+    <div class="flex justify-center">
+      <div class="relative flex items-center text-[#000000]" style="--items: 2">
+        <NuxtLink :class="activeClass('/', '#about')" class="peer mx-5" :to="{ path: '/', hash: '#about' }"
+          >About</NuxtLink
+        >
+        <NuxtLink :class="activeClass('/', '#work')" class="peer mx-5" :to="{ path: '/', hash: '#work' }">Work</NuxtLink>
+        <span
+          class="pointer-events-none absolute -top-10 left-[calc(100%/var(--items)*(var(--index)-0.5))] h-0 w-0 -translate-x-1/2 border-l-[.625rem] border-r-[.625rem] border-t-[.875rem] border-solid border-[#232323] border-l-transparent border-r-transparent align-middle opacity-0 transition-all duration-500 [--index:0] peer-[.active-link]:opacity-100 peer-[.active-link:nth-of-type(1)]:[--index:1] peer-[.active-link:nth-of-type(2)]:[--index:2]"
+        ></span>
+      </div>
       <NuxtLink
         class="block rounded-[.625rem] border border-solid border-[#000000] px-[1.5rem] py-[.5rem] font-bold hover:bg-[#000000] hover:text-[#ffffff]"
         to="#contact"
@@ -29,3 +27,17 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+const route = useRoute();
+const isClient = ref(false);
+
+onMounted(() => {
+  isClient.value = true;
+});
+
+const activeClass = (path, hash) => {
+  return isClient.value && route.path === path && route.hash === hash ? 'active-link' : '';
+};
+</script>
