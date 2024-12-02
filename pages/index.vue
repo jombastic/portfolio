@@ -1,7 +1,7 @@
 <template>
   <div>
     <Hero />
-    <div id="about"></div>
+    <About />
     <div id="work"></div>
     <div id="contact"></div>
   </div>

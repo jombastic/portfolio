@@ -1,9 +1,9 @@
 <template>
   <div class="relative">
-    <div class="fixed w-full z-50">
+    <div class="absolute w-full z-50">
       <div class="container px-4">
         <nav
-          class="sticky top-0 mt-14 flex items-center justify-between rounded-3xl border-8 border-solid border-[#F2F2F2] bg-[#2B2B2B24] p-6 shadow-[0rem_.25rem_1.875rem_#2B2B2B24] backdrop-blur-[1.875rem]"
+          class="top-0 mt-14 flex items-center justify-between rounded-3xl border-8 border-solid border-[#F2F2F2] bg-[#2B2B2B24] p-6 shadow-[0rem_.25rem_1.875rem_#2B2B2B24] backdrop-blur-[1.875rem]"
         >
           <div>
             <AppLink
