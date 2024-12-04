@@ -1,10 +1,12 @@
 <template>
-  <div id="about" class="relative py-32 shadow-[0px_4px_10px_0px_#0000001A]">
-    <div
-      class="absolute -top-6 bottom-0 w-full bg-[url(/img/sports.png)] bg-cover"
-    ></div>
-    <div class="relative z-[1]">
-      <div class="container">
+  <div>
+    <div class="relative">
+      <div
+        class="absolute -top-6 bottom-0 min-h-[1080px] w-full bg-[url(/img/sports.png)] bg-[length:100%_100%] bg-no-repeat"
+      ></div>
+    </div>
+    <div id="about" class="relative py-28">
+      <div class="container px-4">
         <h2
           class="mb-16 text-center text-[104px] font-extrabold text-[#E9E9E9]"
         >

@@ -2,7 +2,7 @@
   <div>
     <Hero />
     <About />
-    <div id="work"></div>
+    <Projects />
     <div id="contact"></div>
   </div>
 </template>
