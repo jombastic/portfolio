@@ -1,0 +1,14 @@
+[
+  {
+    "id": "project-alpha",
+    "name": "Project Alpha",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "span": 1
+  },
+  {
+    "id": "beta-build",
+    "name": "Beta Build",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "span": 2
+  }
+]

@@ -58,51 +58,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+const projects = useState("content");
 
-const projects = ref([]);
-
-// Generate random project data with column span
-const generateRandomProjects = () => {
-  const projectNames = [
-    "Project Alpha",
-    "Beta Build",
-    "Gamma Growth",
-    "Delta Design",
-    "Epsilon Expansion",
-    "Zeta Zone",
-    "Eta Evolution",
-    "Theta Theory",
-    "Iota Innovation",
-    "Kappa Knowledge",
-  ];
-
-  const projectDescriptions = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.",
-    "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.",
-    "Nullam varius, turpis et commodo pharetra, est eros bibendum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.",
-    "Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum.",
-    "Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.",
-  ];
-
-  return projectNames.map((name, index) => ({
-    name,
-    description: projectDescriptions[index],
-    span: Math.random() > 0.7 ? 2 : 1, // Randomly assign a span of 2 to some projects
-  }));
-};
-
-// Perform randomization on client-side only
-onMounted(() => {
-  projects.value = generateRandomProjects();
-});
-
-const modalOpen = useState('isOpen');
+const modalOpen = useState("isOpen");
 
 function openModal() {
   modalOpen.value = !modalOpen.value;
