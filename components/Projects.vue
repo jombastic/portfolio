@@ -1,5 +1,5 @@
 <template>
-  <div id="work" class="relative">
+  <section id="work" class="relative">
     <div class="container px-4">
       <h2 class="mb-20 text-[104px] font-extrabold text-[#E9E9E9]">
         Some projects
@@ -54,7 +54,7 @@
 
       <Modal />
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

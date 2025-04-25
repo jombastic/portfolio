@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <section id="about">
     <div class="relative">
       <div
         class="absolute -top-6 bottom-0 min-h-[1080px] w-full bg-[url(/img/sports.png)] bg-[length:100%_100%] bg-no-repeat"
       ></div>
     </div>
-    <div id="about" class="relative py-28">
+    <div class="relative py-28">
       <div class="container px-4">
         <h2
           class="mb-16 text-center text-[104px] font-extrabold text-[#E9E9E9]"
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup></script>

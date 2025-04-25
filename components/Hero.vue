@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[url('/img/forest.png')] bg-cover pb-32 pt-[16.125rem]">
+  <section class="bg-[url('/img/forest.png')] bg-cover pb-32 pt-[16.125rem]">
     <div
       class="container grid-cols-5 justify-between px-4 text-[#EFEFEE] lg:grid"
     >
@@ -17,11 +17,7 @@
           Besides solving complex problems, I love hiking, exploring the great
           outdoors, beer and heavy metal music.
         </p>
-        <AppLink
-          class="inline-block rounded-[.625rem] bg-[#F2DA91] px-[1.5rem] py-3 font-bold text-[#000000] transition-all duration-500 hover:bg-[#000000] hover:text-[#ffffff]"
-          :to="{ path: '/', hash: '#contact' }"
-          >Get in touch</AppLink
-        >
+        <BaseButton element="a" :to="{ path: '/', hash: '#contact' }">Get in touch</BaseButton>
       </div>
       <div
         class="col-start-4 col-end-6 flex items-end justify-center lg:justify-end"
@@ -42,5 +38,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
