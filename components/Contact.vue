@@ -49,7 +49,9 @@
             placeholder="What's on your mind?"
             rows="6"
           />
-          <BaseButton type="submit">Send message 🍺</BaseButton>
+          <BaseButton type="submit" :disabled="isSubmitting"
+            >{{ isSubmitting ? "Submitting... 🍺" : "Send message" }}
+          </BaseButton>
         </form>
       </div>
     </div>
@@ -60,7 +62,7 @@
 import Polygons from "@/public/img/polygons.svg";
 import * as yup from "yup";
 
-const { handleSubmit } = useForm({
+const { handleSubmit, isSubmitting } = useForm({
   validationSchema: yup.object({
     name: yup.string().required().label("Name"),
     email: yup.string().required().email().label("Email"),
@@ -69,6 +71,12 @@ const { handleSubmit } = useForm({
 });
 
 const onSubmit = handleSubmit((values) => {
-  alert(JSON.stringify(values, null, 2));
+  // Simulates a 2 second delay
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Submitted", JSON.stringify(values, null, 2));
+      resolve();
+    }, 2000);
+  });
 });
 </script>
