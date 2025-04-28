@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Slavcho's portfolio",
-    }
+    },
   },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
@@ -32,8 +32,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // The private keys which are only available server-side
+    recaptchaSecretKey: "",
     // Keys within public are also exposed client-side
     public: {
+      recaptchaSiteKey: "",
       apiBase: "/api",
     },
   },

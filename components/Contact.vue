@@ -61,6 +61,19 @@
 <script setup>
 import Polygons from "@/public/img/polygons.svg";
 import * as yup from "yup";
+import { useReCaptcha } from 'vue-recaptcha-v3';
+
+const recaptchaInstance = useReCaptcha();
+
+const recaptcha = async () => {
+  // optional you can await for the reCaptcha load
+  await recaptchaInstance?.recaptchaLoaded();
+
+  // get the token, a custom action could be added as argument to the method
+  const token = await recaptchaInstance?.executeRecaptcha("homepage");
+
+  return token;
+};
 
 const toast = useToast();
 
@@ -74,10 +87,12 @@ const { handleSubmit, isSubmitting } = useForm({
 
 const onSubmit = handleSubmit(async (values, { resetForm }) => {
   try {
+    const token = await recaptcha();
     const res = await $fetch("/api/sendMail", {
       method: "POST",
       body: {
         ...values,
+        'recaptcha-token': token
       },
     });
     if (res?.accepted) {
