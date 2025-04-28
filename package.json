@@ -16,10 +16,13 @@
     "@vee-validate/yup": "^4.15.0",
     "nuxt": "^3.14.1592",
     "nuxt-svgo": "^4.0.17",
+    "nuxt-toast": "^1.1.4",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "nodemailer": "^6.10.1",
+    "nuxt-nodemailer": "^1.1.2",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.9"
   }

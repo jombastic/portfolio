@@ -62,6 +62,8 @@
 import Polygons from "@/public/img/polygons.svg";
 import * as yup from "yup";
 
+const toast = useToast();
+
 const { handleSubmit, isSubmitting } = useForm({
   validationSchema: yup.object({
     name: yup.string().required().label("Name"),
@@ -70,13 +72,36 @@ const { handleSubmit, isSubmitting } = useForm({
   }),
 });
 
-const onSubmit = handleSubmit((values) => {
-  // Simulates a 2 second delay
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      console.log("Submitted", JSON.stringify(values, null, 2));
-      resolve();
-    }, 2000);
-  });
+const onSubmit = handleSubmit(async (values, { resetForm }) => {
+  try {
+    const res = await $fetch("/api/sendMail", {
+      method: "POST",
+      body: {
+        ...values,
+      },
+    });
+    if (res?.accepted) {
+      resetForm();
+
+      toast.success({
+        title: "Hey!",
+        message: "Your message has been sent successfully! 🍻",
+        iconText: "done",
+      });
+    } else {
+      toastError();
+    }
+  } catch (err) {
+    toastError();
+  }
 });
+
+const toastError = () =>
+  toast.error({
+    title: "Oops!",
+    message: "Something went wrong. Please try again later...",
+    backgroundColor: "#5a1a1a",
+    iconText: "error",
+    class: "custom-toast custom-toast--error",
+  });
 </script>
