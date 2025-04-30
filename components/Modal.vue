@@ -1,59 +1,81 @@
 <template>
-  <div>
-    <div v-if="isOpen" class="fixed inset-0 z-50 bg-black bg-opacity-60"></div>
-
-    <div
-      v-if="isOpen"
-      class="fixed inset-0 z-50 flex items-center justify-center"
-    >
+  <Transition>
+    <div v-if="isOpen">
       <div
-        class="relative max-h-full max-w-full rounded-3xl bg-white p-6 shadow-lg"
-        :style="{
-          width: '90vw',
-          height: '90vh',
-          maxWidth: '1200px',
-          maxHeight: '90vh',
-        }"
+        class="fixed left-0 top-0 z-[50] h-full w-full bg-[rgba(0,0,0,0.6)]"
+        @click="closeModal"
+      ></div>
+
+      <div
+        class="fixed left-1/2 top-1/2 z-[100] block h-[90vh] max-h-full w-[75rem] max-w-full -translate-x-1/2 -translate-y-1/2 overflow-y-hidden rounded-3xl bg-white shadow-[0_0_60px_10px_rgba(0,0,0,0.9)]"
       >
-        <button
-          class="absolute right-4 top-4 rounded bg-black p-2 text-white"
-          @click="toggleModal"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6"
+        <div class="h-full w-full overflow-y-auto">
+          <button
+            class="absolute right-5 top-4 z-[1] rounded bg-black p-2 text-white"
+            @click="closeModal"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-        <div class="overflow-auto">
-          <iframe
-            :src="projectUrl"
-            class="h-[80vh] w-full"
-            frameborder="0"
-          ></iframe>
+            <svgo-close class="size-6" :fontControlled="false" />
+          </button>
+          <div class="absolute left-0 top-0 h-full w-full overflow-y-scroll">
+            <div class="mx-auto my-20 w-[800px] max-w-full">
+              <h3 class="mb-16 mt-4 text-center text-[32px] text-black">
+                {{ project.name }}
+              </h3>
+
+              <BaseCarousel :images="project.images" />
+
+              <h4 class="mb-4 mt-16 font-medium">Skills used</h4>
+              <div class="mb-16 flex flex-wrap gap-3">
+                <div
+                  v-for="(tech, key, idx) in project.technologies"
+                  :key="idx"
+                  class="flex items-center gap-1 rounded-md bg-[#E9E9E9] p-3"
+                >
+                  <component
+                    :is="`svgo-${key}`"
+                    class="h-7 w-7"
+                    :fontControlled="false"
+                    filled
+                  ></component>
+                  {{ tech }}
+                </div>
+              </div>
+
+              <h3 class="mb-4 text-2xl font-medium">{{ project.title }}</h3>
+              <p class="font-light">{{ project.description }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </Transition>
 </template>
 
 <script setup>
-const props = defineProps({
-  projectUrl: String,
-});
-
 const isOpen = useState("isOpen", () => false);
+const project = useState("project");
 
-function toggleModal() {
-  isOpen.value = !isOpen.value;
+function closeModal() {
+  isOpen.value = false;
 }
+
+watch(isOpen, (val) => {
+  if (val) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+});
 </script>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  @apply transition-opacity duration-[0.5s] ease-[ease];
+}
+
+.v-enter-from,
+.v-leave-to {
+  @apply opacity-0;
+}
+</style>

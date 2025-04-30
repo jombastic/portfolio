@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "@vee-validate/nuxt",
     "nuxt-nodemailer",
     "nuxt-toast",
+    "vue3-carousel-nuxt",
   ],
   googleFonts: {
     families: {

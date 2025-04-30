@@ -5,64 +5,60 @@
         Some projects
       </h2>
       <div
-        class="grid auto-rows-auto gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
+        class="relative grid auto-rows-auto gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
       >
         <div
           v-for="(project, index) in projects"
           :key="index"
           :class="[
+            'relative',
             'project',
             'flex',
             'flex-col',
             'justify-between',
             'rounded-3xl',
             'bg-[#E9E9E9]',
-            'px-9',
-            'py-5',
-            project.span === 2 ? 'lg:col-span-2' : '',
+            'p-9',
           ]"
         >
           <div>
-            <h3 class="mb-4 text-[32px] text-black">
+            <img
+              class="block max-w-full rounded-3xl"
+              :src="`/img/${project.images[0]}`"
+              alt=""
+            />
+            <h3 class="my-4 text-[32px] text-black">
               {{ project.name }}
             </h3>
-            <p class="line-clamp-4 max-w-[80%] text-lg text-[#232323]">
-              {{ project.description }}
-            </p>
+            <!-- <div class="flex gap-2">
+              <div
+                v-for="(tech, idx) in project.technologies"
+                :key="idx"
+                class="inline-block rounded-md bg-white p-4"
+              >
+                <component :is="`svgo-${tech}`" filled></component>
+                {{ tech }}
+              </div>
+            </div> -->
           </div>
           <button
-            @click="openModal"
+            @click="openModal(project)"
             class="mt-4 flex h-[51px] min-w-[81px] items-center justify-center self-end rounded-full bg-black text-white transition-all duration-500 hover:bg-white hover:text-black"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-11"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-              />
-            </svg>
+            <svgo-arrow class="size-11" :fontControlled="false" />
           </button>
         </div>
       </div>
-
-      <Modal />
     </div>
   </section>
 </template>
 
 <script setup>
-const projects = useState("content");
+const projects = useState("projects");
 
 const modalOpen = useState("isOpen");
-
-function openModal() {
-  modalOpen.value = !modalOpen.value;
+function openModal(project) {
+  modalOpen.value = true;
+  useState("project", () => project);
 }
 </script>

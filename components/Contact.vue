@@ -16,7 +16,7 @@
           </p>
 
           <div class="mt-12 flex justify-center gap-4">
-            <Polygons
+            <svgo-polygons
               v-for="item in 4"
               :key="item"
               class="h-[23px] w-[86px] text-white"
@@ -59,7 +59,6 @@
 </template>
 
 <script setup>
-import Polygons from "@/public/img/polygons.svg";
 import * as yup from "yup";
 import { useReCaptcha } from 'vue-recaptcha-v3';
 
