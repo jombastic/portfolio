@@ -5,5 +5,11 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   nuxtApp.vueApp.use(VueReCaptcha, {
     siteKey: config.public.recaptchaSiteKey,
+    loaderOptions: {
+            autoHideBadge: true,
+            explicitRenderParameters: {
+                badge: 'bottomleft',
+            },
+        },
   });
 });

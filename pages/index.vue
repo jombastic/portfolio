@@ -5,6 +5,7 @@
     <Projects />
     <Contact />
     <Modal />
+    <BaseBackToTop />
   </div>
 </template>
 
