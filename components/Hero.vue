@@ -5,24 +5,26 @@
     >
       <div class="col-start-1 col-end-3 mb-8">
         <h1>
-          <span class="text-[2.75rem] font-medium leading-[2.5]"
+          <span class="text-3xl font-medium sm:text-[2.75rem] leading-[2.5]"
             >Hi, I'm Slavcho.</span
           >
           <br />
-          <span class="text-[4.625rem] font-extrabold leading-[5.5975rem]"
+          <span class="sm:text-[4.625rem] font-extrabold text-4xl leading-10 sm:leading-[5.5975rem]"
             >A fullstack developer.</span
           >
         </h1>
-        <p class="mb-10 mt-2 text-2xl leading-9">
-          Besides solving complex problems, I love hiking, exploring the great
-          outdoors, beer and heavy metal music.
+        <p class="mb-10 mt-2 sm:text-2xl text-lg sm:leading-9">
+          I craft modern, performant web applications from the ground up — from
+          intuitive user interfaces to robust backend systems.
         </p>
-        <BaseButton element="a" :to="{ path: '/', hash: '#contact' }">Get in touch</BaseButton>
+        <BaseButton element="a" :to="{ path: '/', hash: '#contact' }"
+          >Get in touch</BaseButton
+        >
       </div>
       <div
         class="col-start-4 col-end-6 flex items-end justify-center lg:justify-end"
       >
-        <div class="relative max-w-[25.125rem]">
+        <div class="relative max-w-full xs:max-w-[25.125rem]">
           <div
             class="grid items-end justify-center overflow-hidden rounded-[0_0_100vw_100vw]"
           >
