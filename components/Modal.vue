@@ -22,7 +22,7 @@
                 {{ project.name }}
               </h3>
 
-              <BaseCarousel :images="project.images" />
+              <BaseCarousel />
 
               <h4 class="mb-4 mt-16 font-medium">Skills used</h4>
               <div class="mb-16 flex flex-wrap gap-3">

@@ -1,3 +1,28 @@
+<template>
+  <Carousel id="gallery" v-bind="galleryConfig" v-model="currentSlide">
+    <Slide v-for="image in images" :key="image.id">
+      <img :src="image" alt="Gallery Image" class="gallery-image" />
+    </Slide>
+  </Carousel>
+
+  <Carousel id="thumbnails" v-bind="thumbnailsConfig" v-model="currentSlide">
+    <Slide v-for="image in images" :key="image.id">
+      <template #default="{ currentIndex, isActive }">
+        <div
+          :class="['thumbnail', { 'is-active': isActive }]"
+          @click="slideTo(currentIndex)"
+        >
+          <img :src="image" alt="Thumbnail Image" class="thumbnail-image" />
+        </div>
+      </template>
+    </Slide>
+
+    <template #addons>
+      <Navigation />
+    </template>
+  </Carousel>
+</template>
+
 <script setup>
 import "vue3-carousel/carousel.css";
 import { Carousel, Slide, Navigation } from "vue3-carousel";
@@ -23,39 +48,8 @@ const thumbnailsConfig = {
   gap: 10,
 };
 
-defineProps({
-  images: Array,
-});
+const images = useState("project").value.imagesByFolder;
 </script>
-
-<template>
-  <Carousel id="gallery" v-bind="galleryConfig" v-model="currentSlide">
-    <Slide v-for="image in images" :key="image.id">
-      <img :src="`/img/${image}`" alt="Gallery Image" class="gallery-image" />
-    </Slide>
-  </Carousel>
-
-  <Carousel id="thumbnails" v-bind="thumbnailsConfig" v-model="currentSlide">
-    <Slide v-for="image in images" :key="image.id">
-      <template #default="{ currentIndex, isActive }">
-        <div
-          :class="['thumbnail', { 'is-active': isActive }]"
-          @click="slideTo(currentIndex)"
-        >
-          <img
-            :src="`/img/${image}`"
-            alt="Thumbnail Image"
-            class="thumbnail-image"
-          />
-        </div>
-      </template>
-    </Slide>
-
-    <template #addons>
-      <Navigation />
-    </template>
-  </Carousel>
-</template>
 
 <style scoped>
 .carousel {

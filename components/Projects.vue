@@ -24,22 +24,14 @@
           <div>
             <img
               class="block max-w-full rounded-3xl"
-              :src="`/img/${project.images[0]}`"
+              :src="`${imagesByFolder[project.images][0]}`"
+              width="413"
+              height="310"
               alt=""
             />
             <h3 class="my-4 text-[32px] text-black">
               {{ project.name }}
             </h3>
-            <!-- <div class="flex gap-2">
-              <div
-                v-for="(tech, idx) in project.technologies"
-                :key="idx"
-                class="inline-block rounded-md bg-white p-4"
-              >
-                <component :is="`svgo-${tech}`" filled></component>
-                {{ tech }}
-              </div>
-            </div> -->
           </div>
           <button
             @click="openModal(project)"
@@ -57,8 +49,30 @@
 const projects = useState("projects");
 
 const modalOpen = useState("isOpen");
+
+const imageModules = import.meta.glob(
+  "@/assets/img/**/*.{png,jpg,jpeg,gif,svg,webp}",
+  { eager: true },
+);
+const imagesByFolder = {};
+
+Object.entries(imageModules).forEach(([path, mod]) => {
+  // Extract the subfolder name from the path.
+  // The expected path format is something like '@/assets/img/subfolder/filename.ext'
+  const parts = path.split("/assets/img/");
+  if (parts.length > 1) {
+    const relativePath = parts[1]; // e.g. "motf/image.jpg"
+    const subfolder = relativePath.split("/")[0]; // Get the subfolder name
+    if (!imagesByFolder[subfolder]) {
+      imagesByFolder[subfolder] = [];
+    }
+    imagesByFolder[subfolder].push(mod.default);
+  }
+});
+
 function openModal(project) {
   modalOpen.value = true;
+  project.imagesByFolder = imagesByFolder[project.images];
   useState("project", () => project);
 }
 </script>

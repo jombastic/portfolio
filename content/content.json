@@ -4,7 +4,7 @@
       "name": "Museum of the future",
       "url": "https://museumofthefuture.ae/",
       "role": "Front-end developer",
-      "images": ["motf.webp", "motf2.webp", "motf3.webp", "motf4.webp", "motf5.webp"],
+      "images": "motf",
       "technologies": {
         "vue": "Vue.js",
         "html5": "HTML",
