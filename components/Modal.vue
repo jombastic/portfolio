@@ -67,15 +67,3 @@ watch(isOpen, (val) => {
   }
 });
 </script>
-
-<style scoped>
-.v-enter-active,
-.v-leave-active {
-  @apply transition-opacity duration-[0.5s] ease-[ease];
-}
-
-.v-enter-from,
-.v-leave-to {
-  @apply opacity-0;
-}
-</style>

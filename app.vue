@@ -45,6 +45,16 @@ useToast().settings({
 }
 
 .custom-toast--error {
-  @apply shadow-[0_4px_12px_rgba(255,0,0,0.3)]
+  @apply shadow-[0_4px_12px_rgba(255,0,0,0.3)];
+}
+
+.v-enter-active,
+.v-leave-active {
+  @apply transition-opacity duration-[0.5s] ease-[ease];
+}
+
+.v-enter-from,
+.v-leave-to {
+  @apply opacity-0;
 }
 </style>

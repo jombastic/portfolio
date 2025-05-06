@@ -13,7 +13,7 @@
       'cursor-not-allowed bg-gray-400': disabled,
       'bg-[#F2DA91] hover:bg-black hover:text-white': !disabled,
     }"
-    :type="type"
+    :type
   >
     <slot></slot>
   </button>
