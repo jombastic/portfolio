@@ -13,7 +13,7 @@
           <br />
           <span
             class="text-4xl font-extrabold leading-10 sm:text-[4.625rem] sm:leading-[5.5975rem]"
-            >A fullstack developer.</span
+            >Your fullstack developer.</span
           >
         </h1>
         <p class="mb-10 mt-2 text-lg sm:text-2xl sm:leading-9">
