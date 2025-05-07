@@ -1,7 +1,7 @@
 <template>
-  <section id="work" class="relative">
+  <section id="work" class="relative pt-10">
     <div class="container px-4">
-      <h2 class="mb-20 text-[104px] font-extrabold text-[#E9E9E9]">
+      <h2 class="mb-20 text-5xl font-extrabold md:text-[4.625rem]">
         Some projects
       </h2>
       <div

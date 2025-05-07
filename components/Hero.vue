@@ -17,7 +17,7 @@
           >
         </h1>
         <p class="mb-10 mt-2 text-lg sm:text-2xl sm:leading-9">
-          I craft modern, performant web applications from the ground up — from
+          I craft modern, performant web applications from the ground up - from
           intuitive user interfaces to robust backend systems.
         </p>
         <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">

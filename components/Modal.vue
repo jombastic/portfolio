@@ -25,21 +25,7 @@
               <BaseCarousel />
 
               <h4 class="mb-4 mt-16 font-medium">Skills used</h4>
-              <div class="mb-16 flex flex-wrap gap-3">
-                <div
-                  v-for="(tech, key, idx) in project.technologies"
-                  :key="idx"
-                  class="flex items-center gap-1 rounded-md bg-[#E9E9E9] p-3"
-                >
-                  <component
-                    :is="`svgo-${key}`"
-                    class="h-7 w-7"
-                    :fontControlled="false"
-                    filled
-                  ></component>
-                  {{ tech }}
-                </div>
-              </div>
+              <BaseTech :technologies="project.technologies" />
 
               <h3 class="mb-4 text-2xl font-medium">{{ project.title }}</h3>
               <p class="font-light">{{ project.description }}</p>

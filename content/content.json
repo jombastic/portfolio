@@ -19,5 +19,24 @@
       "description": "For the Museum of the Future website, I contributed to the development and maintenance of its front-end, ensuring a seamless and visually captivating user experience. Leveraging Vue.js, HTML, and CSS, I built new features and pages while enhancing existing ones to align with the museum's forward-thinking ethos. I implemented a new payment system using the Network International (N-Genius) API, providing flexibility to toggle between payment systems based on client requirements. Additionally, I upgraded the site's security by replacing reCAPTCHA v2 with v3. These updates, alongside interface improvements, ensured a streamlined and secure journey for visitors exploring the museum online. Technologies used included JavaScript, Vue.js, Docker, and Git, with efficient project management supported by Jira.",
       "span": 1
     }
-  ]
+  ],
+
+  "technologies": {
+    "html5": "HTML",
+    "css3": "CSS",
+    "js": "JavaScript",
+    "vue": "Vue.js",
+    "nuxt": "Nuxt.js",
+    "react": "React.js",
+    "jquery": "jQuery",
+    "tailwindcss": "Tailwind",
+    "bootstrap": "Bootstrap",
+    "php": "PHP",
+    "laravel": "Laravel",
+    "codeigniter": "Codeigniter",
+    "docker": "Docker",
+    "github": "GitHub",
+    "figma": "Figma",
+    "jira": "Jira"
+  }
 }
