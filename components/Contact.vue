@@ -1,16 +1,16 @@
 <template>
-  <section id="contact" class="container px-4 py-24">
+  <section id="contact" class="py-24 sm:container sm:px-4">
     <div
-      class="rounded-3xl bg-[url(/img/sports.png)] bg-cover bg-center bg-no-repeat"
+      class="rounded-3xl bg-[url(/img/sports.png)] bg-center bg-no-repeat xl:bg-cover"
     >
       <div class="py-16">
-        <div class="text-center">
+        <div class="px-4 text-center">
           <h3
-            class="bg-gradient-to-b from-[#F2DA91] to-[#FFF1B9] bg-clip-text text-[74px] font-extrabold text-transparent"
+            class="bg-gradient-to-b from-[#F2DA91] to-[#FFF1B9] bg-clip-text text-4xl font-extrabold text-transparent md:text-7xl mb-6"
           >
             Let's have a beer
           </h3>
-          <p class="text-[1.75rem] text-[#EBF3F4]">
+          <p class="text-2xl text-[#EBF3F4] md:text-[1.75rem]">
             Whether it's a cool project or just a casual chat - drop me a
             message.
           </p>
@@ -30,17 +30,17 @@
           @submit="onSubmit"
           novalidate
         >
-          <div class="flex gap-4">
+          <div class="flex sm:flex-row flex-col gap-4">
             <BaseInput
               name="name"
               placeholder="Your name"
-              customClass="w-1/2"
+              customClass="sm:w-1/2"
             />
             <BaseInput
               name="email"
               type="email"
               placeholder="Your email"
-              customClass="w-1/2"
+              customClass="sm:w-1/2"
             />
           </div>
           <BaseInput
@@ -60,7 +60,7 @@
 
 <script setup>
 import * as yup from "yup";
-import { useReCaptcha } from 'vue-recaptcha-v3';
+import { useReCaptcha } from "vue-recaptcha-v3";
 
 const recaptchaInstance = useReCaptcha();
 
@@ -91,7 +91,7 @@ const onSubmit = handleSubmit(async (values, { resetForm }) => {
       method: "POST",
       body: {
         ...values,
-        'recaptcha-token': token
+        "recaptcha-token": token,
       },
     });
     if (res?.accepted) {
