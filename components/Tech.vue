@@ -7,7 +7,7 @@
         My toolbox
       </h2>
 
-      <BaseTech :technologies />
+      <BaseTech />
     </div>
   </section>
 </template>

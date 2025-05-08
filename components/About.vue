@@ -16,7 +16,7 @@
           class="flex flex-col gap-y-4 text-lg text-white sm:text-xl md:text-2xl"
         >
           <p>
-            For the past {{ yearsOfXp }} years, I have specialized in building
+            For the past {{ yearsOfXp }}+ years, I have specialized in building
             streamlined, user-centric websites alongside sophisticated web
             applications. My portfolio includes modern single-page sites built
             with frameworks like Nuxt.js (this website, for example) as well as
