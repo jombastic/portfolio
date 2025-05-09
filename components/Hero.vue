@@ -36,6 +36,8 @@
             ></div>
             <img
               src="/img/slavco.png"
+              width="448"
+              height="448"
               alt="A photo of me"
               class="relative top-0 z-[2] max-w-[21rem] sm:max-w-[28rem]"
             />
