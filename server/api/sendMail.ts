@@ -51,7 +51,7 @@ export default defineEventHandler(async (event) => {
   return sendMail({
     to: process.env.NUXT_NODEMAILER_AUTH_USER,
     from: result.email,
-    subject: `New Portfolio Contact - ${result.name}`,
+    subject: `New Portfolio Contact - ${result.name} <${result.email}>`,
     text: result.message,
   });
 });
