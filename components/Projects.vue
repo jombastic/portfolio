@@ -5,7 +5,7 @@
         Some projects
       </h2>
       <div
-        class="relative grid auto-rows-auto gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
+        class="relative grid auto-rows-auto gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3"
       >
         <div
           v-for="(project, index) in projects"
@@ -29,32 +29,43 @@
               height="310"
               alt=""
             />
-            <h3 class="my-4 text-[32px] text-black">
+            <h3 class="my-4 text-2xl text-black md:text-[2rem]">
               {{ project.name }}
             </h3>
           </div>
           <button
             @click="openModal(project)"
-            class="mt-4 flex h-[51px] min-w-[81px] items-center justify-center self-end rounded-full bg-black text-white transition-all duration-500 hover:bg-white hover:text-black"
+            class="mt-4 flex h-[3.1875rem] min-w-16 items-center justify-center self-end rounded-full bg-black text-white transition-all duration-500 hover:bg-white hover:text-black md:min-w-[5.0625rem]"
           >
-            <svgo-arrow class="size-11" :fontControlled="false" />
+            <svgo-arrow class="size-8 md:size-11" :fontControlled="false" />
           </button>
         </div>
+      </div>
+      <div
+        v-if="loaded < content.projects.length"
+        class="mt-16 flex justify-center"
+      >
+        <BaseButton @click="loadMore">Load more</BaseButton>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-const projects = useState("projects");
+import content from "@/content/content.json";
 
+const loaded = ref(3);
+const imagesByFolder = ref({});
+
+const projects = useState("projects", () =>
+  content.projects.slice(0, loaded.value),
+);
 const modalOpen = useState("isOpen");
 
 const imageModules = import.meta.glob(
   "@/assets/img/**/*.{png,jpg,jpeg,gif,svg,webp}",
   { eager: true },
 );
-const imagesByFolder = {};
 
 Object.entries(imageModules).forEach(([path, mod]) => {
   // Extract the subfolder name from the path.
@@ -63,16 +74,21 @@ Object.entries(imageModules).forEach(([path, mod]) => {
   if (parts.length > 1) {
     const relativePath = parts[1]; // e.g. "motf/image.jpg"
     const subfolder = relativePath.split("/")[0]; // Get the subfolder name
-    if (!imagesByFolder[subfolder]) {
-      imagesByFolder[subfolder] = [];
+    if (!imagesByFolder.value[subfolder]) {
+      imagesByFolder.value[subfolder] = [];
     }
-    imagesByFolder[subfolder].push(mod.default);
+    imagesByFolder.value[subfolder].push(mod.default);
   }
 });
 
-function openModal(project) {
+const openModal = (project) => {
   modalOpen.value = true;
-  project.imagesByFolder = imagesByFolder[project.images];
-  useState("project", () => project);
-}
+  project.imagesByFolder = imagesByFolder.value[project.images];
+  useState("project").value = project;
+};
+
+const loadMore = () => {
+  loaded.value += 3;
+  projects.value = content.projects.slice(0, loaded.value);
+};
 </script>

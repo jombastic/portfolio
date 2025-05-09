@@ -18,9 +18,18 @@
           </button>
           <div class="absolute left-0 top-0 h-full w-full overflow-y-scroll">
             <div class="mx-auto my-20 w-[800px] max-w-full">
-              <h3 class="mb-16 mt-4 text-center text-[32px] text-black">
+              <h3 class="mb-2 mt-4 text-center text-[32px] text-black">
                 {{ project.name }}
               </h3>
+
+              <div class="mb-10 text-center">
+                <a
+                  :href="project.url"
+                  target="_blank"
+                >
+                  <BaseButton>{{ project.url }}</BaseButton>
+                </a>
+              </div>
 
               <BaseCarousel />
 

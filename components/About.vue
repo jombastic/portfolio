@@ -2,7 +2,7 @@
   <section id="about">
     <div class="relative">
       <div
-        class="absolute -top-6 bottom-0 min-h-[1200px] w-full bg-[url(/img/sports.png)] bg-[length:100%_100%] bg-no-repeat sm:min-h-[1080px] xl:min-h-[980px]"
+        class="absolute -top-6 bottom-0 min-h-[1400px] xs:min-h-[1300px] w-full bg-[url(/img/sports.png)] bg-[length:100%_100%] bg-no-repeat sm:min-h-[1080px] xl:min-h-[980px]"
       ></div>
     </div>
     <div class="relative pt-12 lg:pt-24">

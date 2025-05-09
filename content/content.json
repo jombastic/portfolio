@@ -16,8 +16,167 @@
         "js"
       ],
       "title": "Enhancing the Digital Experience for the Museum of the Future",
-      "description": "For the Museum of the Future website, I contributed to the development and maintenance of its front-end, ensuring a seamless and visually captivating user experience. Leveraging Vue.js, HTML, and CSS, I built new features and pages while enhancing existing ones to align with the museum's forward-thinking ethos. I implemented a new payment system using the Network International (N-Genius) API, providing flexibility to toggle between payment systems based on client requirements. Additionally, I upgraded the site's security by replacing reCAPTCHA v2 with v3. These updates, alongside interface improvements, ensured a streamlined and secure journey for visitors exploring the museum online. Technologies used included JavaScript, Vue.js, Docker, and Git, with efficient project management supported by Jira.",
-      "span": 1
+      "description": "For the Museum of the Future website, I contributed to the development and maintenance of its front-end, ensuring a seamless and visually captivating user experience. Leveraging Vue.js, HTML, and CSS, I built new features and pages while enhancing existing ones to align with the museum's forward-thinking ethos. I implemented a new payment system using the Network International (N-Genius) API, providing flexibility to toggle between payment systems based on client requirements. Additionally, I upgraded the site's security by replacing reCAPTCHA v2 with v3. These updates, alongside interface improvements, ensured a streamlined and secure journey for visitors exploring the museum online."
+    },
+    {
+      "name": "IceTech",
+      "url": "https://icetech.mk/",
+      "role": "Full Stack Developer",
+      "images": "ice",
+      "technologies": [
+        "vue",
+        "nuxt",
+        "html5",
+        "css3",
+        "tailwindcss",
+        "github",
+        "figma"
+      ],
+      "title": "Developing IceTech's High-Performance Website",
+      "description": "Hired to develop IceTech's website, I collaborated with a third-party designer's Figma layout to create a site built entirely with Nuxt.js and Tailwind. My role was to turn this design into a fully responsive, high-performance website that aligns with IceTech's mission to empower businesses digitally. This project highlights my ability to independently handle complex builds and deliver seamless, polished results that effectively represent a brand's expertise—like IceTech's specialization in Adobe Experience Manager (AEM) and digital transformation solutions."
+    },
+    {
+      "name": "European Beer Star Voting Application",
+      "url": "https://european-beer-star.com/",
+      "role": "Full Stack Developer",
+      "images": "tasting",
+      "technologies": [
+        "php",
+        "laravel",
+        "js",
+        "vue",
+        "mysql",
+        "html5",
+        "css3",
+        "linux",
+        "github",
+        "figma"
+      ],
+      "title": "Developing a Voting Application for the European Beer Star Competition",
+      "description": "Hired to develop a full-stack voting application for a prestigious global beer competition, I built a single-page, monolithic application from scratch under a tight deadline. This project involved close collaboration with a designer and project manager to create a seamless voting and rating experience for a jury of hundreds. My role included implementing jury and admin authentication, developing dynamic forms that adapted to different beer types, and integrating an API for exporting data in .xls format. This application highlights my ability to deliver complex, high-stakes projects on schedule while ensuring functionality, security, and user-friendly design."
+    },
+    {
+      "name": "European Beer Star Rating Tool",
+      "url": "https://european-beer-star.com/",
+      "role": "Full Stack Developer",
+      "images": "ebs",
+      "technologies": [
+        "php",
+        "laravel",
+        "vue",
+        "mysql",
+        "jquery",
+        "html5",
+        "css3",
+        "linux",
+        "js",
+        "github"
+      ],
+      "title": "Updating the European Beer Star's Rating Tool",
+      "description": "Tasked with adding new features to the European Beer Star's rating tool application, I updated the project framework to the latest version and refactored legacy code to support data imports from .xls files and the voting app's database. My work included integrating APIs to generate graphs and statistical tables for winning beers and vendors, and another API to compile winner data, create PDFs, and automate email distribution. I collaborated with a QA engineer to resolve bugs and optimize legacy code performance, and I deployed the updated project on a new server. This project showcases my ability to modernize complex systems, ensuring seamless functionality, enhanced data handling, and efficient deployment."
+    },
+    {
+      "name": "mLoyalty",
+      "url": "https://mloyalty.mk/",
+      "role": "Full Stack Developer",
+      "images": "mloyalty",
+      "technologies": [
+        "php",
+        "mysql",
+        "jquery",
+        "html5",
+        "css3",
+        "linux",
+        "js",
+        "github",
+        "bootstrap",
+        "codeigniter"
+      ],
+      "title": "Creating a Multilingual Website for mLoyalty",
+      "description": "Contracted to build and deploy the entire website for mLoyalty, I collaborated closely with a designer and project manager to create a smooth, user-friendly experience that showcases the app's core features. The site introduces users to mLoyalty's key benefits, including streamlined loyalty card storage and multi-language support. In addition to building the site from scratch, I implemented localization for Macedonian, English, and Albanian, ensuring a seamless experience for diverse users.  This project demonstrates my ability to deliver high-quality, multilingual web solutions on schedule while ensuring clarity and ease of use for all visitors."
+    },
+    {
+      "name": "Adamantus",
+      "url": "https://adamantus.com/",
+      "role": "Full Stack Developer",
+      "images": "adamantus",
+      "technologies": [
+        "php",
+        "mysql",
+        "jquery",
+        "html5",
+        "css3",
+        "linux",
+        "js",
+        "github",
+        "bootstrap",
+        "codeigniter"
+      ],
+      "title": "Enhancing Adamantus' Digital Presence",
+      "description": "For Adamantus, I played a pivotal role in modernizing and enhancing their online presence. I redesigned the landing page to reflect the company's vibrant ethos of innovation and reliability, collaborating closely with the designer and project manager to ensure the updated interface met both aesthetic and functional goals. To cater to mobile users, I revamped the AMP homepage, significantly boosting load speeds and improving the site's Google ranking. These optimizations provided users with a seamless and engaging browsing experience, aligning with Adamantus' commitment to excellence."
+    },
+    {
+      "name": "Laser Appraiser",
+      "url": "https://laserappraiser.com/",
+      "role": "Full Stack Developer",
+      "images": "laser",
+      "technologies": [
+        "php",
+        "codeigniter",
+        "mysql",
+        "jquery",
+        "html5",
+        "css3",
+        "linux",
+        "js",
+        "github",
+        "bootstrap",
+        "ps"
+      ],
+      "title": "Revamping and Optimizing Laser Appraiser's Web Experience",
+      "description": "For the Laser Appraiser project, I collaborated with the design and project management teams to revamp existing pages and develop new ones, enhancing the user experience across both mobile and desktop. To improve mobile speed and SEO, I built AMP pages, resulting in faster load times and a boost in Google ranking. Through code optimization and implementing recommendations from Google PageSpeed tools, I achieved an 80% increase in page load speed, significantly enhancing performance. Additional responsibilities included refactoring and debugging legacy code to ensure stability and maintainability."
+    },
+    {
+      "name": "MRZ Scanner",
+      "url": "https://mrzscanner.com/",
+      "role": "Full Stack Developer",
+      "images": "mrz",
+      "technologies": [
+        "php",
+        "codeigniter",
+        "mysql",
+        "jquery",
+        "html5",
+        "css3",
+        "linux",
+        "js",
+        "github",
+        "bootstrap",
+        "ps"
+      ],
+      "title": "Creating the MRZ Scanner Website",
+      "description": "Hired to build and enhance the MRZ Scanner website, I collaborated closely with a designer and project manager to create an optimized, user-friendly experience. To improve mobile performance and Google ranking, I developed AMP pages, ensuring a lightning-fast experience for mobile users. I also redesigned the admin section based on Photoshop templates provided by the designer, adding new features and functionalities to enhance the admin application. <br/> My role involved refactoring and debugging existing code, upgrading authentication and authorization, and integrating new widgets and features within the CMS used across multiple company projects. Technologies included CodeIgniter, Vue.js, AMP, and jQuery, supported by HTML, CSS, MySQL, and third-party APIs. This project demonstrates my ability to deliver high-performance web solutions with a focus on speed, security, and an intuitive user experience."
+    },
+    {
+      "name": "RiverGirl Fishing Co",
+      "url": "https://rivergirlfishing.com/",
+      "role": "Full Stack Developer",
+      "images": "river",
+      "technologies": [
+        "php",
+        "codeigniter",
+        "mysql",
+        "jquery",
+        "html5",
+        "css3",
+        "linux",
+        "js",
+        "github",
+        "bootstrap",
+        "ps"
+      ],
+      "title": "RiverGirl Fishing Co: Enhancing Online Presence for Outdoor Adventures",
+      "description": "For the RiverGirl Fishing Company website, I worked closely with the designer and project manager to build and deploy a full website that captures the spirit of North Carolina's outdoor adventure scene. I created AMP pages to ensure faster load times on mobile and to improve the site's ranking on Google, essential for attracting new visitors to the outfitter. This project showcased my ability to create a visually appealing, mobile-responsive website from scratch, with a focus on performance and user experience. The website ensures a seamless experience for visitors seeking fishing, tubing, and eco-tour adventures."
     }
   ],
 
@@ -32,11 +191,14 @@
     "tailwindcss": "Tailwind",
     "bootstrap": "Bootstrap",
     "php": "PHP",
+    "mysql": "MySql",
     "laravel": "Laravel",
     "codeigniter": "Codeigniter",
+    "linux": "Linux",
     "docker": "Docker",
     "github": "GitHub",
     "figma": "Figma",
-    "jira": "Jira"
+    "jira": "Jira",
+    "ps": "Photoshop"
   }
 }

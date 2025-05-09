@@ -3,7 +3,7 @@
     class="bg-[url('/img/forest.png')] bg-cover pb-32 pt-44 md:pt-[16.125rem]"
   >
     <div
-      class="container grid-cols-5 justify-between px-4 text-[#EFEFEE] lg:grid"
+      class="container justify-between gap-x-4 px-4 text-[#EFEFEE] lg:grid xl:grid-cols-4"
     >
       <div class="col-start-1 col-end-3 mb-8">
         <h1>
@@ -20,24 +20,24 @@
           I craft modern, performant web applications from the ground up - from
           intuitive user interfaces to robust backend systems.
         </p>
-        <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/SlavchoMitrovCV.pdf" target="_blank" rel="noopener noreferrer">
           <BaseButton>View my CV</BaseButton>
         </a>
       </div>
       <div
-        class="col-start-4 col-end-6 flex items-end justify-center lg:justify-end"
+        class="col-start-4 flex items-center justify-center lg:justify-end 2xl:items-end"
       >
-        <div class="xs:max-w-[25.125rem] relative max-w-full">
+        <div class="relative max-w-[18rem] sm:max-w-[24rem]">
           <div
             class="grid items-end justify-center overflow-hidden rounded-[0_0_100vw_100vw]"
           >
             <div
-              class="absolute aspect-square h-[25.125rem] w-[25.125rem] max-w-full rounded-full bg-gradient-to-r from-[#dbdbcf] via-[#f2da91] to-[#f2da91] object-cover lg:ml-auto lg:mt-0"
+              class="absolute aspect-square h-[18rem] w-[18rem] max-w-full rounded-full bg-gradient-to-r from-[#dbdbcf] via-[#f2da91] to-[#f2da91] object-cover sm:h-[24rem] sm:w-[24rem] lg:ml-auto lg:mt-0"
             ></div>
             <img
               src="/img/slavco.png"
               alt="A photo of me"
-              class="relative top-0 z-[2] max-w-[34.625rem]"
+              class="relative top-0 z-[2] max-w-[21rem] sm:max-w-[28rem]"
             />
           </div>
         </div>
