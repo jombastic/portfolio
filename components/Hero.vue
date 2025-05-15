@@ -6,21 +6,35 @@
       class="container justify-between gap-x-4 px-4 text-[#EFEFEE] lg:grid xl:grid-cols-4"
     >
       <div class="col-start-1 col-end-3 mb-8">
-        <h1>
-          <span class="text-3xl font-medium leading-[2.5] sm:text-[2.75rem]"
-            >Hi, I'm Slavcho.</span
-          >
-          <br />
-          <span
-            class="text-4xl font-extrabold leading-10 sm:text-[4.625rem] sm:leading-[5.5975rem]"
-            >Your fullstack developer.</span
-          >
+        <h1
+          class="text-3xl font-medium leading-[2.5] sm:text-[2.75rem]"
+          data-aos="fade-up"
+        >
+          Hi, I'm Slavcho.
         </h1>
-        <p class="mb-10 mt-2 text-lg sm:text-2xl sm:leading-9">
+        <h2
+          class="text-4xl font-extrabold leading-10 sm:text-[4.625rem] sm:leading-[5.5975rem]"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Your fullstack developer.
+        </h2>
+        <p
+          class="mb-10 mt-2 text-lg sm:text-2xl sm:leading-9"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
           I craft modern, performant web applications from the ground up - from
           intuitive user interfaces to robust backend systems.
         </p>
-        <a href="/SlavchoMitrovCV.pdf" target="_blank" rel="noopener noreferrer">
+        <a
+          class="inline-block"
+          href="/SlavchoMitrovCV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-aos="flip-up"
+          data-aos-delay="900"
+        >
           <BaseButton>View my CV</BaseButton>
         </a>
       </div>

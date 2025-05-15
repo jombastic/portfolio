@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     "nuxt-nodemailer",
     "nuxt-toast",
     "vue3-carousel-nuxt",
+    "nuxt-aos",
   ],
   googleFonts: {
     families: {
@@ -61,11 +62,15 @@ export default defineNuxtConfig({
 
   nitro: {
     routeRules: {
-      '/img/**': {
+      "/img/**": {
         headers: {
-          'cache-control': 'public, max-age=31536000, immutable'
-        }
-      }
-    }
-  }
+          "cache-control": "public, max-age=31536000, immutable",
+        },
+      },
+    },
+  },
+  aos: {
+    once: true, // whether animation should happen only once - while scrolling down
+    anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+  },
 });
