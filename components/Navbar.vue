@@ -108,11 +108,10 @@ const closeMenu = () => (menuOpen.value = false);
 <style scoped>
 .fade-slide-enter-active,
 .fade-slide-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  @apply transition-opacity duration-300 ease-[ease];
 }
 .fade-slide-enter-from,
 .fade-slide-leave-to {
-  opacity: 0;
-  transform: translateY(-0.5rem);
+  @apply opacity-0 translate-y-[-0.5rem];
 }
 </style>

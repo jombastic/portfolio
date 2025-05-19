@@ -7,39 +7,41 @@
       <div
         class="relative grid auto-rows-auto gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3"
       >
-        <div
-          v-for="(project, index) in projects"
-          :key="index"
-          :class="[
-            'relative',
-            'project',
-            'flex',
-            'flex-col',
-            'justify-between',
-            'rounded-3xl',
-            'bg-[#E9E9E9]',
-            'p-9',
-          ]"
-        >
-          <div>
-            <img
-              class="block max-w-full rounded-3xl"
-              :src="`${imagesByFolder[project.images][0]}`"
-              width="413"
-              height="310"
-              alt=""
-            />
-            <h3 class="my-4 text-2xl text-black md:text-[2rem]">
-              {{ project.name }}
-            </h3>
-          </div>
-          <button
-            @click="openModal(project)"
-            class="mt-4 flex h-[3.1875rem] min-w-16 items-center justify-center self-end rounded-full bg-black text-white transition-all duration-500 hover:bg-white hover:text-black md:min-w-[5.0625rem]"
+        <TransitionGroup name="project-fade">
+          <div
+            v-for="(project, index) in projects"
+            :key="index"
+            :class="[
+              'relative',
+              'project',
+              'flex',
+              'flex-col',
+              'justify-between',
+              'rounded-3xl',
+              'bg-[#E9E9E9]',
+              'p-9',
+            ]"
           >
-            <svgo-arrow class="size-8 md:size-11" :fontControlled="false" />
-          </button>
-        </div>
+            <div>
+              <img
+                class="block max-w-full rounded-3xl"
+                :src="`${imagesByFolder[project.images][0]}`"
+                width="413"
+                height="310"
+                alt=""
+              />
+              <h3 class="my-4 text-2xl text-black md:text-[2rem]">
+                {{ project.name }}
+              </h3>
+            </div>
+            <button
+              @click="openModal(project)"
+              class="mt-4 flex h-[3.1875rem] min-w-16 items-center justify-center self-end rounded-full bg-black text-white transition-all duration-500 hover:bg-white hover:text-black md:min-w-[5.0625rem]"
+            >
+              <svgo-arrow class="size-8 md:size-11" :fontControlled="false" />
+            </button>
+          </div>
+        </TransitionGroup>
       </div>
       <div
         v-if="loaded < content.projects.length"
@@ -92,3 +94,18 @@ const loadMore = () => {
   projects.value = content.projects.slice(0, loaded.value);
 };
 </script>
+
+<style scoped>
+.project-fade-enter-active,
+.project-fade-leave-active {
+  @apply transition-all duration-[0.5s] ease-[ease];
+}
+
+.project-fade-enter-from {
+  @apply opacity-0 translate-y-[20px];
+}
+
+.project-fade-leave-to {
+  @apply opacity-0 translate-y-[-20px];
+}
+</style>
