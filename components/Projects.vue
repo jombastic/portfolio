@@ -5,7 +5,7 @@
         Some projects
       </h2>
       <div
-        class="relative grid auto-rows-auto gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3"
+        class="relative grid auto-rows-auto gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3"
       >
         <TransitionGroup name="project-fade">
           <div
@@ -24,7 +24,7 @@
           >
             <div>
               <img
-                class="block max-w-full rounded-3xl"
+                class="block max-w-full rounded-3xl w-full h-[310px] object-cover"
                 :src="`${imagesByFolder[project.images][0]}`"
                 width="413"
                 height="310"

@@ -16,8 +16,39 @@
         "docker",
         "github"
       ],
-      "title": "Facebook Clone - Modern Social Platform",
+      "title": "Recreating the Modern Social Platform",
       "description": "A feature-rich social media application built with Laravel, Vue.js and Inertia.js that enables users to create and manage their social presence. The platform includes a sophisticated image cropping system for profile pictures, a dynamic post creation interface with overlay functionality, and a real-time comment system. Users can navigate through a responsive feed, interact with posts, and manage their profile settings through an intuitive dropdown menu system. The application implements secure authentication with email verification and features a modern, component-based architecture with reusable UI elements like modals, buttons, and input fields."
+    },
+    {
+      "name": "Job Board",
+      "role": "Full Stack Developer",
+      "images": "job",
+      "github": "https://github.com/jombastic/job-board",
+      "technologies": [
+        "laravel",
+        "html5",
+        "css3",
+        "tailwindcss",
+        "docker",
+        "github"
+      ],
+      "title": "Job Listing Platform",
+      "description": "A comprehensive Laravel-based job board that connects job seekers with employers. Users can browse and filter job listings by tags, view detailed job descriptions, and apply for positions. Employers can create job postings with company information, manage their listings through a dedicated dashboard, and track application metrics. The platform features user authentication, file uploads for company logos, Markdown support for job descriptions, and a Stripe payment integration that charges $99 for basic job postings with an additional $19 option to highlight listings for better visibility. Built with a focus on user experience and modern design principles."
+    },
+    {
+      "name": "ACME Constructions",
+      "role": "Full Stack Developer",
+      "images": "acme",
+      "github": "https://github.com/jombastic/acme-constructions",
+      "technologies": [
+        "laravel",
+        "html5",
+        "css3",
+        "docker",
+        "github"
+      ],
+      "title": "An example website for a construction firm built with WinterCMS",
+      "description": "While it doesn't feature a state of the art design, construction company website is built with WinterCMS, featuring a custom ACME theme. The site showcases construction projects, company news, and career opportunities through a responsive, SEO-optimized design. It includes a project portfolio, news section, employment listings, and contact system, all designed to enhance ACME Construction's digital presence and facilitate client engagement."
     },
     {
       "name": "IceTech",
@@ -37,147 +68,21 @@
       "description": "Hired to develop IceTech's website, I collaborated with a third-party designer's Figma layout to create a site built entirely with Nuxt.js and Tailwind. My role was to turn this design into a fully responsive, high-performance website that aligns with IceTech's mission to empower businesses digitally. This project highlights my ability to independently handle complex builds and deliver seamless, polished results that effectively represent a brand's expertise—like IceTech's specialization in Adobe Experience Manager (AEM) and digital transformation solutions."
     },
     {
-      "name": "European Beer Star Voting Application",
-      "url": "https://european-beer-star.com/",
+      "name": "Art House",
       "role": "Full Stack Developer",
-      "images": "tasting",
+      "images": "arthouse",
+      "github": "https://github.com/jombastic/art-house",
       "technologies": [
-        "php",
-        "laravel",
-        "js",
         "vue",
-        "mysql",
+        "laravel",
         "html5",
         "css3",
-        "linux",
-        "github",
-        "figma"
-      ],
-      "title": "Developing a Voting Application for the European Beer Star Competition",
-      "description": "Hired to develop a full-stack voting application for a prestigious global beer competition, I built a single-page, monolithic application from scratch under a tight deadline. This project involved close collaboration with a designer and project manager to create a seamless voting and rating experience for a jury of hundreds. My role included implementing jury and admin authentication, developing dynamic forms that adapted to different beer types, and integrating an API for exporting data in .xls format. This application highlights my ability to deliver complex, high-stakes projects on schedule while ensuring functionality, security, and user-friendly design."
-    },
-    {
-      "name": "European Beer Star Rating Tool",
-      "url": "https://european-beer-star.com/",
-      "role": "Full Stack Developer",
-      "images": "ebs",
-      "technologies": [
-        "php",
-        "laravel",
-        "vue",
-        "mysql",
-        "jquery",
-        "html5",
-        "css3",
-        "linux",
-        "js",
+        "tailwindcss",
+        "docker",
         "github"
       ],
-      "title": "Updating the European Beer Star's Rating Tool",
-      "description": "Tasked with adding new features to the European Beer Star's rating tool application, I updated the project framework to the latest version and refactored legacy code to support data imports from .xls files and the voting app's database. My work included integrating APIs to generate graphs and statistical tables for winning beers and vendors, and another API to compile winner data, create PDFs, and automate email distribution. I collaborated with a QA engineer to resolve bugs and optimize legacy code performance, and I deployed the updated project on a new server. This project showcases my ability to modernize complex systems, ensuring seamless functionality, enhanced data handling, and efficient deployment."
-    },
-    {
-      "name": "mLoyalty",
-      "url": "https://mloyalty.mk/",
-      "role": "Full Stack Developer",
-      "images": "mloyalty",
-      "technologies": [
-        "php",
-        "mysql",
-        "jquery",
-        "html5",
-        "css3",
-        "linux",
-        "js",
-        "github",
-        "bootstrap",
-        "codeigniter"
-      ],
-      "title": "Creating a Multilingual Website for mLoyalty",
-      "description": "Contracted to build and deploy the entire website for mLoyalty, I collaborated closely with a designer and project manager to create a smooth, user-friendly experience that showcases the app's core features. The site introduces users to mLoyalty's key benefits, including streamlined loyalty card storage and multi-language support. In addition to building the site from scratch, I implemented localization for Macedonian, English, and Albanian, ensuring a seamless experience for diverse users.  This project demonstrates my ability to deliver high-quality, multilingual web solutions on schedule while ensuring clarity and ease of use for all visitors."
-    },
-    {
-      "name": "Adamantus",
-      "url": "https://adamantus.com/",
-      "role": "Full Stack Developer",
-      "images": "adamantus",
-      "technologies": [
-        "php",
-        "mysql",
-        "jquery",
-        "html5",
-        "css3",
-        "linux",
-        "js",
-        "github",
-        "bootstrap",
-        "codeigniter"
-      ],
-      "title": "Enhancing Adamantus' Digital Presence",
-      "description": "For Adamantus, I played a pivotal role in modernizing and enhancing their online presence. I redesigned the landing page to reflect the company's vibrant ethos of innovation and reliability, collaborating closely with the designer and project manager to ensure the updated interface met both aesthetic and functional goals. To cater to mobile users, I revamped the AMP homepage, significantly boosting load speeds and improving the site's Google ranking. These optimizations provided users with a seamless and engaging browsing experience, aligning with Adamantus' commitment to excellence."
-    },
-    {
-      "name": "Laser Appraiser",
-      "url": "https://laserappraiser.com/",
-      "role": "Full Stack Developer",
-      "images": "laser",
-      "technologies": [
-        "php",
-        "codeigniter",
-        "mysql",
-        "jquery",
-        "html5",
-        "css3",
-        "linux",
-        "js",
-        "github",
-        "bootstrap",
-        "ps"
-      ],
-      "title": "Revamping and Optimizing Laser Appraiser's Web Experience",
-      "description": "For the Laser Appraiser project, I collaborated with the design and project management teams to revamp existing pages and develop new ones, enhancing the user experience across both mobile and desktop. To improve mobile speed and SEO, I built AMP pages, resulting in faster load times and a boost in Google ranking. Through code optimization and implementing recommendations from Google PageSpeed tools, I achieved an 80% increase in page load speed, significantly enhancing performance. Additional responsibilities included refactoring and debugging legacy code to ensure stability and maintainability."
-    },
-    {
-      "name": "MRZ Scanner",
-      "url": "https://mrzscanner.com/",
-      "role": "Full Stack Developer",
-      "images": "mrz",
-      "technologies": [
-        "php",
-        "codeigniter",
-        "mysql",
-        "jquery",
-        "html5",
-        "css3",
-        "linux",
-        "js",
-        "github",
-        "bootstrap",
-        "ps"
-      ],
-      "title": "Creating the MRZ Scanner Website",
-      "description": "Hired to build and enhance the MRZ Scanner website, I collaborated closely with a designer and project manager to create an optimized, user-friendly experience. To improve mobile performance and Google ranking, I developed AMP pages, ensuring a lightning-fast experience for mobile users. I also redesigned the admin section based on Photoshop templates provided by the designer, adding new features and functionalities to enhance the admin application. <br/> My role involved refactoring and debugging existing code, upgrading authentication and authorization, and integrating new widgets and features within the CMS used across multiple company projects. Technologies included CodeIgniter, Vue.js, AMP, and jQuery, supported by HTML, CSS, MySQL, and third-party APIs. This project demonstrates my ability to deliver high-performance web solutions with a focus on speed, security, and an intuitive user experience."
-    },
-    {
-      "name": "RiverGirl Fishing Co",
-      "url": "https://rivergirlfishing.com/",
-      "role": "Full Stack Developer",
-      "images": "river",
-      "technologies": [
-        "php",
-        "codeigniter",
-        "mysql",
-        "jquery",
-        "html5",
-        "css3",
-        "linux",
-        "js",
-        "github",
-        "bootstrap",
-        "ps"
-      ],
-      "title": "RiverGirl Fishing Co: Enhancing Online Presence for Outdoor Adventures",
-      "description": "For the RiverGirl Fishing Company website, I worked closely with the designer and project manager to build and deploy a full website that captures the spirit of North Carolina's outdoor adventure scene. I created AMP pages to ensure faster load times on mobile and to improve the site's ranking on Google, essential for attracting new visitors to the outfitter. This project showcased my ability to create a visually appealing, mobile-responsive website from scratch, with a focus on performance and user experience. The website ensures a seamless experience for visitors seeking fishing, tubing, and eco-tour adventures."
+      "title": "Activity Tracker Web Application",
+      "description": "A modern web application built with Laravel and Livewire that helps users track and manage their daily activities. The application features a clean, intuitive interface for creating, editing, and filtering activities, with additional capabilities like email sharing and time tracking reports. It demonstrates full-stack development skills with features like pagination, date filtering, and email integration, all while maintaining a seamless single-page application experience.\nThis would be perfect for a portfolio as it showcases:\n- Full-stack development capabilities\n- Modern framework usage (Laravel + Livewire)\n- User experience considerations\n- Data management and filtering\n- Email integration\n- Report generation\n- Clean, maintainable code structure\n\nWould you like me to help you create a more detailed portfolio description or focus on specific technical aspects of the project?"
     }
   ],
 
