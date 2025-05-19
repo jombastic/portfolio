@@ -18,16 +18,26 @@
           </button>
           <div class="absolute left-0 top-0 h-full w-full overflow-y-scroll">
             <div class="mx-auto my-20 w-[50rem] max-w-full px-6">
-              <h3 class="mb-2 mt-4 text-center text-[32px] text-black">
-                {{ project.name }}
-              </h3>
-
-              <div class="mb-10 text-center">
+              <div class="mb-10 flex flex-col items-center">
+                <h3 class="mb-2 mt-4 text-center text-[2rem] text-black">
+                  {{ project.name }}
+                </h3>
                 <a
                   :href="project.url"
+                  v-if="project.url"
                   target="_blank"
+                  class="mb-4 inline-block"
                 >
                   <BaseButton>{{ project.url }}</BaseButton>
+                </a>
+                <a
+                  v-if="project.github"
+                  :href="project.github"
+                  target="_blank"
+                  class="mb-4 inline-flex items-center gap-2 rounded-[.625rem] border border-solid border-black px-[1.5rem] py-3 text-lg font-bold transition-all duration-500 hover:bg-black hover:text-white"
+                >
+                  <svgo-github class="size-6" :fontControlled="false" />
+                  <span>Github link</span>
                 </a>
               </div>
 

@@ -1,22 +1,23 @@
 {
   "projects": [
     {
-      "name": "Museum of the future",
-      "url": "https://museumofthefuture.ae/",
-      "role": "Front-end developer",
-      "images": "motf",
+      "name": "Facebook Clone",
+      "role": "Full Stack Developer",
+      "images": "fb",
+      "github": "https://github.com/jombastic/facebook-clone",
       "technologies": [
         "vue",
+        "laravel",
+        "js",
+        "ts",
         "html5",
         "css3",
         "tailwindcss",
         "docker",
-        "github",
-        "jquery",
-        "js"
+        "github"
       ],
-      "title": "Enhancing the Digital Experience for the Museum of the Future",
-      "description": "For the Museum of the Future website, I contributed to the development and maintenance of its front-end, ensuring a seamless and visually captivating user experience. Leveraging Vue.js, HTML, and CSS, I built new features and pages while enhancing existing ones to align with the museum's forward-thinking ethos. I implemented a new payment system using the Network International (N-Genius) API, providing flexibility to toggle between payment systems based on client requirements. Additionally, I upgraded the site's security by replacing reCAPTCHA v2 with v3. These updates, alongside interface improvements, ensured a streamlined and secure journey for visitors exploring the museum online."
+      "title": "Facebook Clone - Modern Social Platform",
+      "description": "A feature-rich social media application built with Laravel, Vue.js and Inertia.js that enables users to create and manage their social presence. The platform includes a sophisticated image cropping system for profile pictures, a dynamic post creation interface with overlay functionality, and a real-time comment system. Users can navigate through a responsive feed, interact with posts, and manage their profile settings through an intuitive dropdown menu system. The application implements secure authentication with email verification and features a modern, component-based architecture with reusable UI elements like modals, buttons, and input fields."
     },
     {
       "name": "IceTech",
@@ -184,6 +185,7 @@
     "html5": "HTML",
     "css3": "CSS",
     "js": "JavaScript",
+    "ts": "Typescript",
     "vue": "Vue.js",
     "nuxt": "Nuxt.js",
     "react": "React.js",
