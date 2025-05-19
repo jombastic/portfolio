@@ -6,7 +6,7 @@
       ></div>
     </div>
     <div class="relative pt-12 lg:pt-24">
-      <div class="container px-4">
+      <div class="container px-6">
         <h2
           class="mb-10 text-center text-5xl font-extrabold text-[#E9E9E9] md:mb-16 md:text-[4.625rem]"
         >

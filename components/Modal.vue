@@ -17,7 +17,7 @@
             <svgo-close class="size-6" :fontControlled="false" />
           </button>
           <div class="absolute left-0 top-0 h-full w-full overflow-y-scroll">
-            <div class="mx-auto my-20 w-[800px] max-w-full">
+            <div class="mx-auto my-20 w-[50rem] max-w-full px-6">
               <h3 class="mb-2 mt-4 text-center text-[32px] text-black">
                 {{ project.name }}
               </h3>

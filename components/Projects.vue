@@ -1,6 +1,6 @@
 <template>
   <section id="work" class="relative pt-10">
-    <div class="container px-4">
+    <div class="container px-6">
       <h2 class="mb-20 text-5xl font-extrabold md:text-[4.625rem]">
         Some projects
       </h2>

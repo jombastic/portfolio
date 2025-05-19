@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div class="absolute z-50 w-full">
-      <div class="container px-4">
+      <div class="container px-6">
         <nav
           class="top-0 mt-14 flex items-center justify-between rounded-3xl border-8 border-solid border-[#F2F2F2] bg-[#2B2B2B24] p-6 shadow-[0rem_.25rem_1.875rem_#2B2B2B24] backdrop-blur-[1.875rem]"
         >
@@ -10,12 +10,13 @@
             <AppLink
               class="block rounded-[12.5rem] border border-solid border-black px-[1.5rem] py-[.5rem] text-xs"
               to="/"
-              ><span class="font-extrabold">Slavcho</span>Mitrov</AppLink
             >
+               <svgo-favicon class="size-8" :filled="true" :fontControlled="false" />
+            </AppLink>
           </div>
 
           <!-- Desktop Menu -->
-          <div class="hidden md:flex items-center justify-center">
+          <div class="hidden items-center justify-center md:flex">
             <div
               class="relative flex items-center text-black"
               style="--items: 2"
@@ -41,10 +42,10 @@
           <!-- Mobile Hamburger -->
           <button
             @click="menuOpen = !menuOpen"
-            class="md:hidden focus:outline-none"
+            class="focus:outline-none md:hidden"
           >
             <svg
-              class="w-6 h-6 text-black"
+              class="h-6 w-6 text-black"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -71,7 +72,7 @@
         <Transition name="fade-slide">
           <div
             v-if="menuOpen"
-            class="md:hidden mt-4 rounded-xl border border-black bg-[#2B2B2B]/20 backdrop-blur-lg p-6 space-y-4 shadow-md"
+            class="mt-4 space-y-4 rounded-xl border border-black bg-[#2B2B2B]/20 p-6 shadow-md backdrop-blur-lg md:hidden"
           >
             <AppLink
               class="block rounded-[.625rem] border border-solid border-black px-[1.5rem] py-3 font-bold transition-all duration-300 hover:bg-black hover:text-white"
@@ -100,7 +101,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 const menuOpen = ref(false);
 const closeMenu = () => (menuOpen.value = false);
 </script>
@@ -112,6 +113,6 @@ const closeMenu = () => (menuOpen.value = false);
 }
 .fade-slide-enter-from,
 .fade-slide-leave-to {
-  @apply opacity-0 translate-y-[-0.5rem];
+  @apply translate-y-[-0.5rem] opacity-0;
 }
 </style>

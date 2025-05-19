@@ -3,7 +3,7 @@
     class="bg-[url('/img/forest.png')] bg-cover pb-32 pt-44 md:pt-[16.125rem]"
   >
     <div
-      class="container justify-between gap-x-4 px-4 text-[#EFEFEE] lg:grid xl:grid-cols-4"
+      class="container justify-between gap-x-4 px-6 text-[#EFEFEE] lg:grid xl:grid-cols-4"
     >
       <div class="col-start-1 col-end-3 mb-8">
         <h1
