@@ -4,6 +4,7 @@
       v-for="(tech, idx) in usedTechnologies"
       :key="idx"
       class="flex items-center gap-1 rounded-md bg-[#E9E9E9] p-3"
+      v-bind="animationProps"
     >
       <component
         :is="`svgo-${tech}`"
@@ -17,11 +18,21 @@
 </template>
 
 <script setup>
-const { technologies } = defineProps({
+const { technologies, animationType } = defineProps({
   technologies: {
     type: Object,
     default: {},
   },
+  animationType: {
+    type: String,
+    default: null,
+  },
+});
+
+const delay = ref(0);
+const delayTime = computed(() => {
+  delay.value += 50;
+  return delay.value;
 });
 
 const allTechnologies = useState("technologies");
@@ -34,5 +45,14 @@ const usedTechnologies = computed(() => {
   }
 
   return Object.keys(allTechnologies.value);
+});
+
+const animationProps = computed(() => {
+  if (!animationType) return {};
+
+  return {
+    "data-aos": animationType,
+    "data-aos-delay": delayTime.value,
+  };
 });
 </script>

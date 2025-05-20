@@ -20,7 +20,7 @@
           Your fullstack developer.
         </h2>
         <p
-          class="mb-10 mt-2 text-lg sm:text-2xl sm:leading-9"
+          class="paragraph mb-10 mt-2 text-lg sm:text-2xl sm:leading-9"
           data-aos="fade-up"
           data-aos-delay="600"
         >
@@ -34,6 +34,7 @@
           rel="noopener noreferrer"
           data-aos="flip-up"
           data-aos-delay="900"
+          data-aos-anchor=".paragraph"
         >
           <BaseButton>View my CV</BaseButton>
         </a>

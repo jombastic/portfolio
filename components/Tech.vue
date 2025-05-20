@@ -7,7 +7,7 @@
         My toolbox
       </h2>
 
-      <BaseTech />
+      <BaseTech animation-type="fade-right" />
     </div>
   </section>
 </template>
