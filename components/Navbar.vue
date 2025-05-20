@@ -1,9 +1,17 @@
 <template>
   <div class="relative">
-    <div class="absolute z-50 w-full">
+    <div
+      class="fixed z-50 w-full transform duration-300 ease-in-out"
+      :class="{ 'translate-y-[-100%]': !isVisible }"
+    >
       <div class="container px-6">
         <nav
-          class="top-0 mt-14 flex items-center justify-between rounded-3xl border-8 border-solid border-[#F2F2F2] bg-[#2B2B2B24] p-6 shadow-[0rem_.25rem_1.875rem_#2B2B2B24] backdrop-blur-[1.875rem]"
+          class="top-0 mt-14 flex items-center justify-between rounded-3xl border-8 border-solid p-6 shadow-[0rem_.25rem_1.875rem_#2B2B2B24] backdrop-blur-[1.875rem] transition-all duration-300"
+          :class="[
+            isAtTop
+              ? 'border-[#F2F2F2] bg-[#2B2B2B24]'
+              : 'border-black bg-[#E9E9E9]',
+          ]"
         >
           <!-- Logo -->
           <div>
@@ -11,7 +19,11 @@
               class="block rounded-[12.5rem] border border-solid border-black px-[1.5rem] py-[.5rem] text-xs"
               to="/"
             >
-               <svgo-favicon class="size-8" :filled="true" :fontControlled="false" />
+              <svgo-favicon
+                class="size-8"
+                :filled="true"
+                :fontControlled="false"
+              />
             </AppLink>
           </div>
 
@@ -101,9 +113,32 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+
 const menuOpen = ref(false);
+const isVisible = ref(true);
+const isAtTop = ref(true);
+let lastScrollY = ref(0);
+
 const closeMenu = () => (menuOpen.value = false);
+
+const handleScroll = () => {
+  const currentScrollY = window.scrollY;
+
+  // Show navbar when scrolling up or at the top of the page
+  isVisible.value = currentScrollY < lastScrollY.value || currentScrollY < 10;
+
+  // Update isAtTop based on scroll position
+  isAtTop.value = currentScrollY < 10;
+
+  lastScrollY.value = currentScrollY;
+};
 </script>
 
 <style scoped>

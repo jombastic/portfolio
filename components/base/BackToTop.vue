@@ -11,8 +11,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
-
 const route = useRoute();
 
 const isVisible = ref(false);
