@@ -1,11 +1,11 @@
 <template>
   <section id="work" class="relative pt-10">
-    <div class="container px-6">
+    <div class="m-auto max-w-lg px-6 md:container">
       <h2 class="mb-20 text-5xl font-extrabold md:text-[4.625rem]">
         Some projects
       </h2>
       <div
-        class="relative grid auto-rows-auto gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3"
+        class="relative grid auto-rows-auto gap-6 md:grid-cols-2 xl:grid-cols-3"
       >
         <TransitionGroup name="project-fade">
           <div
@@ -24,7 +24,7 @@
           >
             <div>
               <img
-                class="block max-w-full rounded-3xl w-full h-[310px] object-cover"
+                class="block h-[250px] w-full max-w-full rounded-3xl object-cover"
                 :src="`${imagesByFolder[project.images][0]}`"
                 width="413"
                 height="310"
@@ -102,10 +102,10 @@ const loadMore = () => {
 }
 
 .project-fade-enter-from {
-  @apply opacity-0 translate-y-[20px];
+  @apply translate-y-[20px] opacity-0;
 }
 
 .project-fade-leave-to {
-  @apply opacity-0 translate-y-[-20px];
+  @apply translate-y-[-20px] opacity-0;
 }
 </style>

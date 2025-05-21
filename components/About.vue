@@ -1,12 +1,7 @@
 <template>
-  <section id="about">
-    <div class="relative">
-      <div
-        class="absolute -top-6 bottom-0 min-h-[87.5rem] w-full bg-[url(/img/sports.png)] bg-cover bg-center xs:min-h-[81.25rem] sm:min-h-[74rem] 2xl:bg-contain 2xl:bg-center 2xl:min-h-[61.25rem]"
-      ></div>
-    </div>
+  <section id="about" class="relative">
     <div class="relative pt-12 lg:pt-24">
-      <div class="container px-6">
+      <div class="md:container px-6">
         <h2
           class="mb-10 text-center text-5xl font-extrabold text-[#E9E9E9] md:mb-16 md:text-[4.625rem]"
         >

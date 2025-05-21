@@ -1,8 +1,7 @@
 <template>
   <div>
     <Hero />
-    <About />
-    <Tech />
+    <AboutTech />
     <Projects />
     <Contact />
     <Modal />

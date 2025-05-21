@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="py-16 sm:container sm:px-6">
+  <section id="contact" class="py-16 md:container px-6">
     <div
       class="rounded-3xl bg-[url(/img/sports.png)] bg-center bg-no-repeat xl:bg-cover"
     >

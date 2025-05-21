@@ -1,16 +1,16 @@
 <template>
   <div class="relative">
     <div
-      class="fixed z-50 w-full transform duration-300 ease-in-out"
-      :class="{ 'translate-y-[-100%]': !isVisible }"
+      class="absolute z-50 w-full transform duration-300 ease-in-out md:fixed"
+      :class="{ 'md:translate-y-[-100%]': !isVisible }"
     >
-      <div class="container px-6">
+      <div class="px-6 md:container">
         <nav
-          class="top-0 mt-14 flex items-center justify-between rounded-3xl border-8 border-solid p-6 shadow-[0rem_.25rem_1.875rem_#2B2B2B24] backdrop-blur-[1.875rem] transition-all duration-300"
+          class="top-0 mt-14 flex items-center justify-between rounded-3xl border-8 border-solid p-4 shadow-[0rem_.25rem_1.875rem_#2B2B2B24] backdrop-blur-[1.875rem] transition-all duration-300 md:p-6"
           :class="[
             isAtTop
               ? 'border-[#F2F2F2] bg-[#2B2B2B24]'
-              : 'border-black bg-[#E9E9E9]',
+              : 'md:border-black md:bg-[#E9E9E9]',
           ]"
         >
           <!-- Logo -->
@@ -20,7 +20,7 @@
               to="/"
             >
               <svgo-favicon
-                class="size-8"
+                class="size-6 md:size-8"
                 :filled="true"
                 :fontControlled="false"
               />
@@ -131,13 +131,15 @@ const closeMenu = () => (menuOpen.value = false);
 const handleScroll = () => {
   const currentScrollY = window.scrollY;
 
-  // Show navbar when scrolling up or at the top of the page
-  isVisible.value = currentScrollY < lastScrollY.value || currentScrollY < 10;
+  // Only update isVisible for desktop devices (md and above)
+  if (window.innerWidth >= 768) {
+    // 768px is the md breakpoint in Tailwind
+    isVisible.value = currentScrollY < lastScrollY.value || currentScrollY < 10;
+    // Update isAtTop based on scroll position
+    isAtTop.value = currentScrollY < 10;
 
-  // Update isAtTop based on scroll position
-  isAtTop.value = currentScrollY < 10;
-
-  lastScrollY.value = currentScrollY;
+    lastScrollY.value = currentScrollY;
+  }
 };
 </script>
 
