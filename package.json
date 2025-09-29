@@ -14,7 +14,7 @@
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@vee-validate/nuxt": "^4.15.0",
     "@vee-validate/yup": "^4.15.0",
-    "nuxt": "^3.14.1592",
+    "nuxt": "^4.1.2",
     "nuxt-aos": "^1.2.5",
     "nuxt-svgo": "^4.0.17",
     "nuxt-toast": "^1.1.4",
