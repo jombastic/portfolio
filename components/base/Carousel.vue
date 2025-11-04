@@ -1,7 +1,13 @@
 <template>
   <Carousel id="gallery" v-bind="galleryConfig" v-model="currentSlide">
     <Slide v-for="image in images" :key="image.id">
-      <img :src="image" alt="Gallery Image" class="gallery-image" />
+      <img
+        :src="image"
+        alt="Gallery Image"
+        class="gallery-image"
+        loading="lazy"
+        decoding="async"
+      />
     </Slide>
   </Carousel>
 
@@ -12,7 +18,13 @@
           :class="['thumbnail', { 'is-active': isActive }]"
           @click="slideTo(currentIndex)"
         >
-          <img :src="image" alt="Thumbnail Image" class="thumbnail-image" />
+          <img
+            :src="image"
+            alt="Thumbnail Image"
+            class="thumbnail-image"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </template>
     </Slide>

@@ -29,6 +29,8 @@
                 width="413"
                 height="310"
                 alt=""
+                loading="lazy"
+                decoding="async"
               />
               <h3 class="my-4 text-2xl text-black md:text-[2rem]">
                 {{ project.name }}

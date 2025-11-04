@@ -8,7 +8,7 @@
           Copyright ©
           {{ year }}
           <a
-            href="https://www.linkedin.com/in/slavcho-mitrov-795b15110/"
+            href="https://www.linkedin.com/in/slav-mit/"
             target="_blank"
             class="inline-flex justify-center gap-x-2 rounded-[0.5rem] px-3 py-1 font-bold text-black transition-all duration-300 hover:underline"
           >

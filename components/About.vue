@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="relative">
     <div class="relative pt-12 lg:pt-24">
-      <div class="md:container px-6">
+      <div class="px-6 md:container">
         <h2
           class="mb-10 text-center text-5xl font-extrabold text-[#E9E9E9] md:mb-16 md:text-[4.625rem]"
         >
@@ -14,11 +14,15 @@
             For the past {{ yearsOfXp }}+ years, I have specialized in building
             streamlined, user-centric websites alongside sophisticated web
             applications. My portfolio includes modern single-page sites built
-            with frameworks like Nuxt.js (this website, for example) as well as
-            custom web solutions - featuring CRM systems with secure
-            authentication and authorization, seamless payment integrations, and
-            robust APIs. I excel at transforming complex requirements into
-            elegant, scalable digital experiences.
+            with frameworks like Nuxt.js (<NuxtLink
+              to="https://github.com/jombastic/portfolio"
+              target="_blank"
+              class="underline-offset-3 ml-1 inline-block font-semibold text-[#F2DA91] underline decoration-transparent transition-colors duration-150 hover:decoration-current"
+              >this portfolio</NuxtLink
+            >, for example) as well as custom web solutions - featuring CRM
+            systems with secure authentication and authorization, seamless
+            payment integrations, and robust APIs. I excel at transforming
+            complex requirements into elegant, scalable digital experiences.
           </p>
           <p>
             In addition to solving intricate technical challenges 💡, I am an
