@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[url('/img/forest.png')] bg-cover pb-32 pt-44 md:pt-[16.125rem]"
+    class="bg-[url('/img/forest.webp')] bg-cover pb-32 pt-44 md:pt-[16.125rem]"
   >
     <div
       class="justify-between gap-x-4 px-6 text-[#EFEFEE] md:container lg:grid xl:grid-cols-4"
@@ -50,7 +50,7 @@
               class="absolute aspect-square h-[18rem] w-[18rem] max-w-full rounded-full bg-gradient-to-r from-[#dbdbcf] via-[#f2da91] to-[#f2da91] object-cover sm:h-[24rem] sm:w-[24rem] lg:ml-auto lg:mt-0"
             ></div>
             <img
-              src="/img/slavco.png"
+              src="/img/slavco.webp"
               width="448"
               height="448"
               alt="A photo of me"

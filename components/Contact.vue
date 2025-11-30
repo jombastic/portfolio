@@ -1,7 +1,7 @@
 <template>
   <section id="contact" class="py-16 md:container px-6">
     <div
-      class="rounded-3xl bg-[url(/img/sports.png)] bg-center bg-no-repeat xl:bg-cover"
+      class="rounded-3xl bg-[url(/img/sports.webp)] bg-center bg-no-repeat xl:bg-cover"
     >
       <div class="py-16">
         <div class="px-4 text-center">
