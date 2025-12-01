@@ -6,6 +6,7 @@
     >
       <div class="px-6 md:container">
         <nav
+          role="navigation"
           class="top-0 mt-14 flex items-center justify-between rounded-3xl border-8 border-solid p-4 shadow-[0rem_.25rem_1.875rem_#2B2B2B24] backdrop-blur-[1.875rem] transition-all duration-300 md:p-6"
           :class="[
             isAtTop
@@ -24,6 +25,7 @@
                 :filled="true"
                 :fontControlled="false"
               />
+              <span class="sr-only">Home</span>
             </AppLink>
           </div>
 
@@ -55,6 +57,7 @@
           <button
             @click="menuOpen = !menuOpen"
             class="focus:outline-none md:hidden"
+            aria-label="Menu"
           >
             <svg
               class="h-6 w-6 text-black"

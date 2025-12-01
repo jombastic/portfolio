@@ -1,5 +1,5 @@
 <template>
-  <footer class="md:container mb-8 max-w-4xl px-6">
+  <footer role="contentinfo" class="mb-8 max-w-4xl px-6 md:container">
     <div
       class="rounded-2xl bg-[#2B2B2B24] p-6 text-center shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[1.875rem]"
     >

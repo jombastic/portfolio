@@ -1,5 +1,6 @@
 <template>
-  <section
+  <header
+    role="banner"
     class="bg-[url('/img/forest.webp')] bg-cover pb-32 pt-44 md:pt-[16.125rem]"
   >
     <div
@@ -27,17 +28,15 @@
           I craft modern, performant web applications from the ground up - from
           intuitive user interfaces to robust backend systems.
         </p>
-        <a
-          class="inline-block"
-          href="/SlavchoMitrovCV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+        <BaseButton
+          element="a"
+          path="/"
+          hash="work"
           data-aos="flip-up"
           data-aos-delay="900"
           data-aos-anchor=".paragraph"
+          >Projects</BaseButton
         >
-          <BaseButton element="a" path="/" hash="work">Projects</BaseButton>
-        </a>
       </div>
       <div
         class="col-start-4 flex items-center justify-center lg:justify-end 2xl:items-end"
@@ -55,12 +54,10 @@
               height="448"
               alt="A photo of me"
               class="relative top-0 z-[2] max-w-[21rem] sm:max-w-[28rem]"
-              loading="lazy"
-              decoding="async"
             />
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 </template>

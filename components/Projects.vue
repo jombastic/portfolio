@@ -39,6 +39,7 @@
             <button
               @click="openModal(project)"
               class="mt-4 flex h-[3.1875rem] min-w-16 items-center justify-center self-end rounded-full bg-black text-white transition-all duration-500 hover:bg-white hover:text-black md:min-w-[5.0625rem]"
+              aria-label="Open project"
             >
               <svgo-arrow class="size-8 md:size-11" :fontControlled="false" />
             </button>

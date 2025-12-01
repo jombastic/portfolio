@@ -1,10 +1,12 @@
 <template>
   <div>
-    <Hero />
-    <AboutTech />
-    <Projects />
-    <Contact />
-    <Modal />
+    <main role="main">
+      <Hero />
+      <AboutTech />
+      <Projects />
+      <Contact />
+      <Modal />
+    </main>
     <Footer />
     <BaseBackToTop />
   </div>
