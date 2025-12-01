@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     "nuxt-toast",
     "vue3-carousel-nuxt",
     "nuxt-aos",
+    "nuxt-vitalizer",
   ],
   googleFonts: {
     families: { Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900] },

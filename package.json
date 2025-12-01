@@ -18,6 +18,7 @@
     "nuxt-aos": "^1.2.5",
     "nuxt-svgo": "^4.0.17",
     "nuxt-toast": "^1.1.4",
+    "nuxt-vitalizer": "^2.0.0",
     "vue": "latest",
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "latest",
