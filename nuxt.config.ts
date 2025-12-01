@@ -36,6 +36,13 @@ export default defineNuxtConfig({
     "nuxt-aos",
     "nuxt-vitalizer",
   ],
+  features: {
+    inlineStyles: true, // or a function to determine inlining
+  },
+  vitalizer: {
+    disablePrefetchLinks: true,
+    disableStylesheets: "entry",
+  },
   googleFonts: {
     families: { Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900] },
     display: "swap",
