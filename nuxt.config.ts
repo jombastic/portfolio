@@ -36,9 +36,11 @@ export default defineNuxtConfig({
     "nuxt-aos",
   ],
   googleFonts: {
-    families: {
-      Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-    },
+    families: { Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900] },
+    display: "swap",
+    preload: true,
+    download: true, // self-host via nuxt module
+    inject: true,
   },
   nodemailer: {
     host: "smtp.mailtrap.io",
