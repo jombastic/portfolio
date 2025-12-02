@@ -20,7 +20,10 @@ export default defineNuxtConfig({
 
         { rel: "manifest", href: "favicon/site.webmanifest" },
       ],
-      meta: [{ name: "apple-mobile-web-app-title", content: "MyWebSite" }],
+      meta: [
+        { name: "apple-mobile-web-app-title", content: "MyWebSite" },
+        { name: "description", content: "This is the portfolio website of Slavcho Mitrov" }
+      ],
     },
   },
   compatibilityDate: "2024-11-01",
